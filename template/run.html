@@ -1,0 +1,33 @@
+{% extends 'headerPage.html' %}
+
+{% block content%}
+<h2 style="text-align: center; padding: 10px;"> View Result</h2>
+<form method="post" enctype="multipart/form-data" action="predictImage" style="margin-top: 10px; text-align: center;">
+
+    {% csrf_token %}
+    <div>
+        <input type="text" value={{name}} name="filePath2" style="border: 0; text-align: center; display: none;" size="50">
+        <input type="submit" value="Submit" style="display: none;"></div>
+        <!--
+        <figure class="half" style="display:flex">
+            <img style="width:400px; float:left" src='{{inputImage}}'>
+            <img style="width:400px; float:right" src='{{predictedImage}}'>
+            <figcaption>Input (left) and Output (right)</figcaption>
+
+        </figure>
+        -->
+        <h1>Input (left), Mask (center), and Overlayed (right)</h1>
+        <div class="row">
+            <div class="column">
+                <img src='{{inputImage}}' alt="Input" style="width:100%">
+            </div>
+            <div class="column">
+                <img src='{{mask}}' alt="mask" style="width:100%">
+            </div>
+            <div class="column">
+                <img src='{{overlayed}}' alt="Output" style="width:100%">
+            </div>
+        </div>
+</form>
+<br>
+{% endblock %}

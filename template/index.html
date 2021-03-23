@@ -1,0 +1,22 @@
+{% extends 'headerPage.html' %}
+
+{% block content%}
+
+<br>
+<br>
+<h2>Upload Image for Segmentation</h2>
+
+
+<br>
+
+<form method="post" enctype="multipart/form-data" action="predictImage">  
+    {% csrf_token %}
+    <div class="col-md-4 col-sm-4">
+        <label for="fname">Upload Image File Here:</label> 
+    </div> 
+    <input name="filePath" type="file" style="display: inline;">
+    <input type="submit" value="Submit" style="display: inline;"></div>
+</form>
+
+
+{% endblock %}
