@@ -19,17 +19,17 @@ jobs:
     - name: Set up Python version
       uses: actions/setup-python@v1
       with:
-        python-version: '3.6'
+        python-version: '3.7'
 
     - name: Build using AppService-Build
       uses: azure/appservice-build@v2
       with:
         platform: python
-        platform-version: '3.6'
+        platform-version: '3.7'
 
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v2
       with:
         app-name: 'JOON-WoundcareML-WebAppDemo'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_355d5fccb7e54330ad38cd30d3e16f1e }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_5615c9be5fec4cd687af9ee7fe74b268 }}
