@@ -32,4 +32,4 @@ jobs:
       with:
         app-name: 'JOON-WoundcareML-WebAppDemo'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_f97e0518ed3242deab4058b221514862 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_ac37e9965c51437a838ec21a833810d1 }}
